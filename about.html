@@ -16,7 +16,14 @@
 <ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="index.html#products">Products</a></li>
-<li><a href="about.html">About</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle">About ▼</a>
+<div class="dropdown-menu">
+<a href="about.html">About Us</a>
+<a href="about.html#story">Our Story</a>
+<a href="about.html#blog">Blog</a>
+</div>
+</li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
 </nav>
@@ -102,6 +109,30 @@ a stylish wardrobe on a budget.
 <footer>
 <p>© 2026 AR Clothing Zone</p>
 </footer>
+
+<script>
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+  toggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    const dropdown = this.closest('.dropdown');
+    dropdown.classList.toggle('active');
+    
+    // Close other dropdowns
+    document.querySelectorAll('.dropdown').forEach(d => {
+      if(d !== dropdown) d.classList.remove('active');
+    });
+  });
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+  if(!e.target.closest('.dropdown')) {
+    document.querySelectorAll('.dropdown').forEach(d => {
+      d.classList.remove('active');
+    });
+  }
+});
+</script>
 
 </body>
 </html>

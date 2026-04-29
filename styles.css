@@ -40,12 +40,70 @@ border-radius:5px;
 }
 
 .navbar a:hover{
+color:white;
+text-decoration:none;
+font-weight:500;
+font-size:16px;
+transition:all 0.3s ease;
+padding:8px 15px;
+border-radius:5px;
+}
+
+.navbar a:hover{
 background:rgba(198, 31, 43, 0.2);
 color:#C61F2B;
 transform:translateY(-2px);
 }
 
-.logo{
+.dropdown{
+position:relative;
+}
+
+.dropdown-toggle{
+cursor:pointer;
+}
+
+.dropdown-menu{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+background:white;
+border-radius:8px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+min-width:180px;
+z-index:1000;
+}
+
+.dropdown.active .dropdown-menu{
+display:flex;
+flex-direction:column;
+}
+
+.dropdown-menu a{
+color:#333;
+padding:12px 20px;
+text-decoration:none;
+transition:all 0.3s ease;
+border:none;
+}
+
+.dropdown-menu a:first-child{
+border-radius:8px 8px 0 0;
+}
+
+.dropdown-menu a:last-child{
+border-radius:0 0 8px 8px;
+}
+
+.dropdown-menu a:hover{
+background:#1E5AA8;
+color:white;
+padding-left:25px;
+}
+
+.navbar a{
+color:white;
 height:180px;
 width:180px;
 object-fit:contain;
