@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn the story, mission, values, and journey of AR Clothing Zone.">
-  <title>About Us | AR Clothing Zone</title>
+  <meta name="description" content="Shop hoodies, shirts, jackets, and everyday fashion from AR Clothing Zone.">
+  <title>Products | AR Clothing Zone</title>
   <link rel="icon" href="brand-logo-cropped.png">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,11 +16,11 @@
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
+        <li><a href="products.html" class="active" aria-current="page">Products</a></li>
         <li class="dropdown">
-          <button class="dropdown-toggle active" type="button" aria-expanded="false">About</button>
+          <button class="dropdown-toggle" type="button" aria-expanded="false">About</button>
           <div class="dropdown-menu">
-            <a href="about.html" aria-current="page">About Us</a>
+            <a href="about.html">About Us</a>
             <a href="blog.html">Blog</a>
           </div>
         </li>
@@ -31,104 +31,21 @@
 
   <main>
     <section class="page-hero">
-      <p class="eyebrow">About AR Clothing Zone</p>
-      <h1>A clothing brand built around comfort, confidence, and everyday style.</h1>
-      <p>We bring together practical designs, polished presentation, and accessible prices for customers who want reliable fashion choices.</p>
+      <p class="eyebrow">Shop the collection</p>
+      <h1>Products designed for confident everyday style.</h1>
+      <p>Filter by category and find hoodies, shirts, jackets, and signature pieces ready for your wardrobe.</p>
     </section>
 
-    <section class="content-section">
-      <div class="split-layout">
-        <div>
-          <p class="eyebrow">Company story</p>
-          <h2>Started with a simple fashion promise.</h2>
-        </div>
-        <div>
-          <p>AR Clothing Zone began as a focused clothing destination for people who want trend-aware pieces without losing comfort. We believe the best outfits are easy to wear, simple to style, and strong enough to become wardrobe favorites.</p>
-          <p>Our collections are selected with attention to fabric, fit, finish, and everyday usefulness.</p>
-        </div>
+    <section class="content-section product-page">
+      <div class="filter-bar" aria-label="Product category filters">
+        <button type="button" class="filter-btn active" data-filter="all">All</button>
+        <button type="button" class="filter-btn" data-filter="hoodies">Hoodies</button>
+        <button type="button" class="filter-btn" data-filter="shirts">Shirts</button>
+        <button type="button" class="filter-btn" data-filter="jackets">Jackets</button>
+        <button type="button" class="filter-btn" data-filter="pants">Pants</button>
+        <button type="button" class="filter-btn" data-filter="dresses">Dresses</button>
       </div>
-    </section>
-
-    <section class="content-section muted-section">
-      <div class="split-layout">
-        <div>
-          <p class="eyebrow">Mission</p>
-          <h2>Make modern fashion easy to access.</h2>
-        </div>
-        <div>
-          <p>Our mission is to deliver quality clothing at fair prices while giving customers a smooth, friendly shopping experience. We want every piece to help people feel ready for their day.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <div class="section-heading">
-        <p class="eyebrow">Values</p>
-        <h2>What we stand for</h2>
-      </div>
-      <div class="value-grid">
-        <article>
-          <h3>Quality First</h3>
-          <p>We choose products with dependable materials, neat finishing, and strong everyday appeal.</p>
-        </article>
-        <article>
-          <h3>Accessible Pricing</h3>
-          <p>We keep fashion practical so more customers can enjoy stylish clothing without overspending.</p>
-        </article>
-        <article>
-          <h3>Customer Care</h3>
-          <p>We focus on helpful communication, simple ordering, and clear product guidance.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="content-section muted-section">
-      <div class="section-heading">
-        <p class="eyebrow">Why choose us</p>
-        <h2>Designed for a better shopping experience</h2>
-      </div>
-      <div class="feature-grid">
-        <article>
-          <strong>Curated collections</strong>
-          <p>We focus on wearable products instead of overwhelming customers with random stock.</p>
-        </article>
-        <article>
-          <strong>Modern styling</strong>
-          <p>Our pieces are selected to pair easily with casual, streetwear, and smart-casual looks.</p>
-        </article>
-        <article>
-          <strong>Responsive support</strong>
-          <p>Customers can reach us through form, email, or WhatsApp for order help.</p>
-        </article>
-        <article>
-          <strong>Consistent quality</strong>
-          <p>We pay attention to details that make clothing feel better after purchase.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <div class="section-heading">
-        <p class="eyebrow">Brand journey</p>
-        <h2>Our Timeline</h2>
-      </div>
-      <div class="timeline">
-        <article>
-          <span>2024</span>
-          <h3>Idea and identity</h3>
-          <p>The AR Clothing Zone concept was shaped around accessible fashion and clean brand presentation.</p>
-        </article>
-        <article>
-          <span>2025</span>
-          <h3>Collection planning</h3>
-          <p>We refined product categories around hoodies, shirts, jackets, and versatile everyday pieces.</p>
-        </article>
-        <article>
-          <span>2026</span>
-          <h3>Digital storefront</h3>
-          <p>The brand website became a polished destination for browsing, learning, and ordering.</p>
-        </article>
-      </div>
+      <div id="product-container" class="product-grid" aria-live="polite"></div>
     </section>
   </main>
 
@@ -165,5 +82,6 @@
   </footer>
 
   <script src="navbar.js"></script>
+  <script src="products.js"></script>
 </body>
 </html>

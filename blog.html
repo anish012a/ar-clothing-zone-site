@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AR Clothing Zone is a modern clothing brand for stylish hoodies, shirts, jackets, and everyday fashion.">
-  <title>AR Clothing Zone | Modern Clothing Brand</title>
+  <meta name="description" content="Read fashion tips, product guides, and style updates from AR Clothing Zone.">
+  <title>Blog | AR Clothing Zone</title>
   <link rel="icon" href="brand-logo-cropped.png">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,13 +15,13 @@
         <img src="brand-logo-cropped.png" alt="AR Clothing Zone Logo" class="logo">
       </a>
       <ul class="nav-links">
-        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="products.html">Products</a></li>
         <li class="dropdown">
-          <button class="dropdown-toggle" type="button" aria-expanded="false">About</button>
+          <button class="dropdown-toggle active" type="button" aria-expanded="false">About</button>
           <div class="dropdown-menu">
             <a href="about.html">About Us</a>
-            <a href="blog.html">Blog</a>
+            <a href="blog.html" aria-current="page">Blog</a>
           </div>
         </li>
         <li><a href="contact.html">Contact</a></li>
@@ -30,149 +30,67 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Made for everyday confidence</p>
-        <h1>Street-ready fashion with premium comfort.</h1>
-        <p>Discover clean, versatile clothing designed for modern wardrobes, casual styling, and effortless daily wear.</p>
-        <div class="hero-actions">
-          <a href="products.html" class="btn btn-primary">Explore Products</a>
-          <a href="about.html" class="btn btn-secondary">Our Story</a>
-        </div>
-      </div>
+    <section class="page-hero">
+      <p class="eyebrow">Style journal</p>
+      <h1>Fashion guides, outfit ideas, and product advice.</h1>
+      <p>Explore simple styling tips that help you get more from every hoodie, shirt, jacket, and seasonal piece.</p>
     </section>
 
     <section class="content-section">
-      <div class="split-layout">
+      <article class="article-feature">
+        <img src="ChatGPT Image Apr 1, 2026, 01_34_44 PM.png" alt="Featured fashion article">
         <div>
-          <p class="eyebrow">Brand introduction</p>
-          <h2>Fashion that looks sharp and feels easy.</h2>
+          <p class="blog-date">Featured Article</p>
+          <h2>How to build a versatile clothing rotation</h2>
+          <p>A strong wardrobe starts with pieces that repeat well: a clean t-shirt, one reliable hoodie, a smart shirt, and an outer layer that upgrades the whole outfit.</p>
+          <a href="contact.html" class="btn btn-primary">Ask for Styling Help</a>
         </div>
-        <div>
-          <p>AR Clothing Zone creates approachable fashion for people who want style without complication. Our collections focus on comfortable fabrics, wearable colors, neat finishing, and pieces that can move from daily errands to weekend plans.</p>
-          <p>From hoodies and shirts to jackets and curated seasonal looks, every item is selected with a simple goal: help you dress better, faster.</p>
-        </div>
-      </div>
+      </article>
     </section>
 
     <section class="content-section muted-section">
       <div class="section-heading">
-        <p class="eyebrow">Shop by style</p>
-        <h2>Featured Categories</h2>
-        <p>Build your outfit from our most-loved clothing categories.</p>
+        <p class="eyebrow">Latest posts</p>
+        <h2>Blog Articles</h2>
       </div>
-      <div class="category-grid">
-        <a href="products.html?category=hoodies" class="category-card">
-          <img src="ChatGPT Image Apr 1, 2026, 01_34_24 PM.png" alt="Street hoodie collection">
-          <div>
-            <span>Comfort layers</span>
-            <h3>Hoodies</h3>
-          </div>
-        </a>
-        <a href="products.html?category=shirts" class="category-card">
-          <img src="ChatGPT Image Apr 1, 2026, 01_36_31 PM.png" alt="Casual shirt collection">
-          <div>
-            <span>Smart everyday</span>
-            <h3>Shirts</h3>
-          </div>
-        </a>
-        <a href="products.html?category=jackets" class="category-card">
-          <img src="ChatGPT Image Apr 1, 2026, 01_35_10 PM.png" alt="Premium jacket collection">
-          <div>
-            <span>Statement outerwear</span>
-            <h3>Jackets</h3>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <div class="section-heading">
-        <p class="eyebrow">Popular picks</p>
-        <h2>Featured Products</h2>
-        <p>A quick look at customer-ready pieces from the full catalog.</p>
-      </div>
-      <div class="product-grid preview-grid">
-        <article class="product">
-          <div class="product-image">
-            <img src="ChatGPT Image Apr 1, 2026, 01_32_48 PM.png" alt="Classic T-Shirt">
-          </div>
-          <div class="product-details">
-            <span>Everyday essential</span>
-            <h3>Classic T-Shirt</h3>
-            <p>NPR 999</p>
-            <a href="products.html" class="product-action">View Product</a>
-          </div>
-        </article>
-        <article class="product">
-          <div class="product-image">
-            <img src="ChatGPT Image Apr 1, 2026, 01_34_24 PM.png" alt="Street Hoodie">
-          </div>
-          <div class="product-details">
-            <span>Soft fleece</span>
-            <h3>Street Hoodie</h3>
-            <p>NPR 1,999</p>
-            <a href="products.html" class="product-action">View Product</a>
-          </div>
-        </article>
-        <article class="product">
-          <div class="product-image">
-            <img src="ChatGPT Image Apr 1, 2026, 01_35_10 PM.png" alt="Premium Jacket">
-          </div>
-          <div class="product-details">
-            <span>Layered look</span>
-            <h3>Premium Jacket</h3>
-            <p>NPR 2,499</p>
-            <a href="products.html" class="product-action">View Product</a>
-          </div>
-        </article>
-        <article class="product">
-          <div class="product-image">
-            <img src="ChatGPT Image Apr 1, 2026, 01_36_31 PM.png" alt="Casual Shirt">
-          </div>
-          <div class="product-details">
-            <span>Smart casual</span>
-            <h3>Casual Shirt</h3>
-            <p>NPR 1,499</p>
-            <a href="products.html" class="product-action">View Product</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="content-section muted-section">
-      <div class="section-heading">
-        <p class="eyebrow">Style journal</p>
-        <h2>From the Blog</h2>
-      </div>
-      <div class="blog-container">
-        <article class="blog-card">
+      <div class="blog-container blog-grid-wide">
+        <article class="blog-card" id="summer-fashion-trends">
           <p class="blog-date">April 15, 2026</p>
           <h3>Summer Fashion Trends 2026</h3>
-          <p>Explore breathable fabrics, clean layering, and color choices for warm-weather outfits.</p>
-          <a href="blog.html#summer-fashion-trends">Read More</a>
+          <p>From breathable layers to bold but wearable colors, see what is shaping everyday summer fashion.</p>
+          <a href="contact.html">Ask About This Style</a>
         </article>
-        <article class="blog-card">
+        <article class="blog-card" id="casual-wardrobe">
           <p class="blog-date">April 10, 2026</p>
           <h3>How to Style Casual Wardrobes</h3>
-          <p>Learn how to turn simple basics into polished looks for every day of the week.</p>
-          <a href="blog.html#casual-wardrobe">Read More</a>
+          <p>Use core pieces to create outfits that work for class, work, coffee plans, and relaxed weekends.</p>
+          <a href="contact.html">Ask About This Style</a>
         </article>
-        <article class="blog-card">
+        <article class="blog-card" id="quality-fabrics">
           <p class="blog-date">April 5, 2026</p>
           <h3>Choosing Quality Fabrics</h3>
-          <p>Understand fabric weight, texture, and finish before you choose your next piece.</p>
-          <a href="blog.html#quality-fabrics">Read More</a>
+          <p>Learn how fabric texture, stretch, and weight affect how clothing looks and feels.</p>
+          <a href="contact.html">Ask About This Style</a>
+        </article>
+        <article class="blog-card" id="budget-fashion">
+          <p class="blog-date">March 28, 2026</p>
+          <h3>Budget-Friendly Fashion Tips</h3>
+          <p>Build a stylish wardrobe by buying versatile items first and statement pieces second.</p>
+          <a href="contact.html">Ask About This Style</a>
+        </article>
+        <article class="blog-card" id="layering-jackets">
+          <p class="blog-date">March 18, 2026</p>
+          <h3>Layering Jackets the Right Way</h3>
+          <p>Balance proportion, color, and fabric weight to make jackets look intentional.</p>
+          <a href="contact.html">Ask About This Style</a>
+        </article>
+        <article class="blog-card" id="fit-matters">
+          <p class="blog-date">March 8, 2026</p>
+          <h3>Why Fit Matters Most</h3>
+          <p>A good fit can make simple outfits look premium, clean, and confident.</p>
+          <a href="contact.html">Ask About This Style</a>
         </article>
       </div>
-    </section>
-
-    <section class="cta-section">
-      <div>
-        <p class="eyebrow">Ready to upgrade your wardrobe?</p>
-        <h2>Browse the full AR Clothing Zone collection.</h2>
-      </div>
-      <a href="products.html" class="btn btn-light">Visit Products Page</a>
     </section>
   </main>
 
