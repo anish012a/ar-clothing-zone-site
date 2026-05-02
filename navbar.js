@@ -1,24 +1,3 @@
-function setupAboutDropdown() {
-  document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
-    toggle.addEventListener("click", () => {
-      const dropdown = toggle.closest(".dropdown");
-      const isOpen = dropdown.classList.toggle("active");
-      toggle.setAttribute("aria-expanded", String(isOpen));
-    });
-  });
-
-  document.addEventListener("click", (event) => {
-    if (event.target.closest(".dropdown")) {
-      return;
-    }
-
-    document.querySelectorAll(".dropdown").forEach((dropdown) => {
-      dropdown.classList.remove("active");
-      dropdown.querySelector(".dropdown-toggle")?.setAttribute("aria-expanded", "false");
-    });
-  });
-}
-
 function setupContactForm() {
   const form = document.querySelector(".contact-form form");
 
@@ -67,6 +46,5 @@ function setupContactForm() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  setupAboutDropdown();
   setupContactForm();
 });
