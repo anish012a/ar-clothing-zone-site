@@ -209,24 +209,143 @@
       </div>
     </section>
 
-    <section class="py-5" id="contact">
+    <section class="py-5 contact-section" id="contact">
       <div class="container">
-        <div class="section-heading mb-4">
-          <p class="eyebrow">Contact</p>
-          <h2>Visit Our Location</h2>
+        <div class="section-heading mb-5">
+          <p class="eyebrow">Let's Connect</p>
+          <h2>Get in Touch with AR Clothing Zone</h2>
+          <p>Have questions about our anime hoodies or streetwear? We're here to help. Reach out via WhatsApp for instant replies or send us a message.</p>
         </div>
-        <div class="row g-4 align-items-stretch">
-          <div class="col-md-6">
-            <div class="contact-card h-100">
-              <p><span class="contact-label">Phone</span><br><a href="tel:+9779746955071">+977 9746955071</a></p>
-              <p><span class="contact-label">Email</span><br><a href="mailto:shresthaamol012@gmail.com">shresthaamol012@gmail.com</a></p>
-              <p><span class="contact-label">Location</span><br>Sankhamul, Kathmandu, Nepal</p>
-              <a href="https://wa.me/9779746955071" target="_blank" rel="noopener noreferrer" class="btn whatsapp-btn w-100">Order on WhatsApp</a>
+        
+        <div class="contact-grid">
+          <!-- Left: Contact Information -->
+          <div class="contact-info-column">
+            <div class="contact-card premium-card">
+              <div class="contact-header">
+                <p class="eyebrow">Direct Contact</p>
+                <h3>Get in Touch</h3>
+                <p class="contact-subtitle">Response within 24 hours</p>
+              </div>
+              
+              <div class="contact-item">
+                <span class="contact-icon">📱</span>
+                <div>
+                  <p class="contact-label">WhatsApp / Phone</p>
+                  <a href="https://wa.me/9779746955071" target="_blank" rel="noopener noreferrer" class="contact-link">+977 9746955071</a>
+                  <p class="contact-hint">Best for instant replies</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-icon">✉️</span>
+                <div>
+                  <p class="contact-label">Email</p>
+                  <a href="mailto:shresthaamol012@gmail.com" class="contact-link">shresthaamol012@gmail.com</a>
+                  <p class="contact-hint">For detailed inquiries</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <div>
+                  <p class="contact-label">Visit Us</p>
+                  <p class="contact-text">Sankhamul, Kathmandu, Nepal</p>
+                  <p class="contact-hint">Open for orders daily</p>
+                </div>
+              </div>
+
+              <div class="contact-actions">
+                <a href="https://wa.me/9779746955071?text=Hello%2C%20I%20want%20to%20order%20from%20AR%20Clothing%20Zone" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp w-100">
+                  <span>💬 Message on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-embed mt-4" aria-label="Google Map for Sankhamul Kathmandu Nepal">
+              <iframe title="Sankhamul Kathmandu Nepal map" src="https://www.google.com/maps?q=Sankhamul%20Kathmandu%20Nepal&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="map-embed h-100" aria-label="Google Map for Sankhamul Kathmandu Nepal">
-              <iframe title="Sankhamul Kathmandu Nepal map" src="https://www.google.com/maps?q=Sankhamul%20Kathmandu%20Nepal&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <!-- Right: Contact Form -->
+          <div class="contact-form-column">
+            <div class="contact-form premium-card">
+              <div class="form-header">
+                <h3>Send us a Message</h3>
+                <p>We'll get back to you promptly</p>
+              </div>
+
+              <form id="contact-form-index" novalidate>
+                <!-- Name Field -->
+                <div class="form-group floating-label-group">
+                  <input 
+                    type="text" 
+                    id="name-index" 
+                    name="name" 
+                    class="form-input" 
+                    placeholder=" "
+                    required
+                    aria-label="Your name"
+                  >
+                  <label for="name-index" class="floating-label">Full Name</label>
+                  <span class="input-error"></span>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group floating-label-group">
+                  <input 
+                    type="email" 
+                    id="email-index" 
+                    name="email" 
+                    class="form-input" 
+                    placeholder=" "
+                    required
+                    aria-label="Your email"
+                  >
+                  <label for="email-index" class="floating-label">Email Address</label>
+                  <span class="input-error"></span>
+                </div>
+
+                <!-- Subject Field -->
+                <div class="form-group floating-label-group">
+                  <input 
+                    type="text" 
+                    id="subject-index" 
+                    name="subject" 
+                    class="form-input" 
+                    placeholder=" "
+                    aria-label="Subject"
+                  >
+                  <label for="subject-index" class="floating-label">Subject (optional)</label>
+                </div>
+
+                <!-- Message Field -->
+                <div class="form-group floating-label-group">
+                  <textarea 
+                    id="message-index" 
+                    name="message" 
+                    class="form-input form-textarea" 
+                    placeholder=" "
+                    rows="5"
+                    required
+                    aria-label="Your message"
+                  ></textarea>
+                  <label for="message-index" class="floating-label">Message</label>
+                  <span class="input-error"></span>
+                </div>
+
+                <!-- Form Status -->
+                <div class="form-status" role="status" aria-live="polite"></div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary w-100 form-submit-btn">
+                  Send Message
+                </button>
+
+                <p class="form-hint">
+                  💡 Prefer WhatsApp? <a href="https://wa.me/9779746955071?text=Hello%2C%20I%20want%20to%20order%20from%20AR%20Clothing%20Zone" target="_blank" rel="noopener noreferrer">Message us directly</a>
+                </p>
+              </form>
             </div>
           </div>
         </div>
@@ -242,6 +361,12 @@
       </div>
     </section>
   </main>
+
+  <div class="sticky-whatsapp-btn" aria-label="Contact us on WhatsApp" role="region">
+    <a href="https://wa.me/9779746955071?text=Hello%2C%20I%20want%20to%20order%20from%20AR%20Clothing%20Zone" target="_blank" rel="noopener noreferrer" class="whatsapp-float" title="Message on WhatsApp">
+      <span class="whatsapp-icon">💬</span>
+    </a>
+  </div>
 
   <footer class="py-5">
     <div class="container">
