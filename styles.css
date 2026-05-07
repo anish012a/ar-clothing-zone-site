@@ -472,7 +472,7 @@ h3 {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.blog-card a {
+.blog-card a:not(.btn) {
   color: var(--red);
   display: inline-flex;
   font-weight: 900;
@@ -480,8 +480,10 @@ h3 {
   text-decoration: none;
 }
 
-.blog-card .btn {
-  color: var(--paper);
+.blog-card a.btn-primary {
+  color: var(--paper) !important;
+  font-weight: 900;
+  margin-top: 18px;
 }
 
 .article-feature {
