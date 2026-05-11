@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop anime hoodies, oversized tees, streetwear sets, jackets, and accessories from AR Clothing Zone in Kathmandu Nepal.">
+  <meta property="og:title" content="Shop Anime Streetwear | AR Clothing Zone">
+  <meta property="og:description" content="Browse premium anime hoodies, oversized tees, and streetwear essentials in Nepal.">
+  <meta property="og:image" content="assets/img/anime-hoodie-naruto-768.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Shop Anime Streetwear | AR Clothing Zone</title>
+  <link rel="canonical" href="https://anish012a.github.io/ar-clothing-zone-site/shop.html">
+  <link rel="icon" href="brand-logo-cropped.png">
+  <link rel="stylesheet" href="css/styles.min.css?v=20260508">
+  <link rel="stylesheet" href="css/ai-assistant.min.css?v=20260508">
+  <link rel="stylesheet" href="css/ui-enhancements.min.css?v=20260508">
+  <link rel="stylesheet" href="css/search-ui.min.css?v=20260508">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <div class="container">
+        <a href="index.html" class="brand" aria-label="AR Clothing Zone home"><img src="assets/img/ar-clothing-zone-logo-160.jpg" srcset="assets/img/ar-clothing-zone-logo-160.jpg 160w, assets/img/ar-clothing-zone-logo-300.jpg 300w" sizes="132px" alt="AR Clothing Zone" class="logo" width="132" height="62"></a>
+        <button class="navbar-toggler" type="button" data-nav-toggle aria-controls="mainNavbar" aria-expanded="false" aria-label="Open navigation menu"><span class="navbar-toggler-icon" aria-hidden="true"></span></button>
+        <div class="navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="shop.html" class="nav-link active" aria-current="page">Shop</a></li>
+            <li><a href="size-guide.html" class="nav-link">Size Guide</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="ai-stylist.html" class="nav-link">AI Stylist</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero py-5">
+      <div class="container">
+        <p class="eyebrow">Shop AR Clothing Zone</p>
+        <h1>Anime streetwear, oversized fits, and custom-ready drops.</h1>
+        <p>Filter the catalog, shortlist your favorite pieces, and order instantly through WhatsApp.</p>
+      </div>
+    </section>
+
+    <section class="py-5" aria-labelledby="shop-title">
+      <div class="container">
+        <div class="section-heading mb-4">
+          <p class="eyebrow">Product grid</p>
+          <h2 id="shop-title">Find your next fit</h2>
+        </div>
+        <div class="filter-bar mb-4" aria-label="Product category filters">
+          <button type="button" class="filter-btn active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="hoodies">Anime Hoodies</button>
+          <button type="button" class="filter-btn" data-filter="tshirts">Oversized Tees</button>
+          <button type="button" class="filter-btn" data-filter="designs">Custom Designs</button>
+        </div>
+        <div class="shop-tools mb-4" aria-label="Shop search and sorting">
+          <label>
+            <span>Search products</span>
+            <input type="search" id="shop-search" placeholder="Search hoodies, tees, designs..." autocomplete="off">
+          </label>
+          <label>
+            <span>Sort</span>
+            <select id="shop-sort">
+              <option value="featured">Featured</option>
+              <option value="price-low">Price low to high</option>
+              <option value="price-high">Price high to low</option>
+              <option value="name">Name A-Z</option>
+            </select>
+          </label>
+        </div>
+        <div id="product-container" class="row" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-5">
+    <div class="container"><p class="copyright">&copy; 2026 AR Clothing Zone. All rights reserved.</p></div>
+  </footer>
+  
+  <div class="cart-toast" data-cart-toast role="status" aria-live="polite"></div>
+  <button type="button" class="back-to-top" data-back-to-top aria-label="Back to top">Top</button>
+  <script type="module" src="js/navbar.min.js?v=20260508"></script>
+  <script type="module" src="js/products.min.js?v=20260508"></script>
+  <script defer src="js/ai-assistant.min.js?v=20260508"></script>
+</body>
+</html>

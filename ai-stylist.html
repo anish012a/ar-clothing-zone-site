@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Use AR Clothing Zone AI Stylist to get anime hoodie, oversized fit, sizing, custom print, and Kathmandu delivery recommendations.">
+  <meta property="og:title" content="AI Stylist | AR Clothing Zone">
+  <meta property="og:description" content="Get personalized anime hoodie and streetwear recommendations with our AI Stylist assistant.">
+  <meta property="og:image" content="assets/img/ar-clothing-zone-logo-300.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>AI Stylist | AR Clothing Zone</title>
+  <link rel="canonical" href="https://anish012a.github.io/ar-clothing-zone-site/ai-stylist.html">
+  <link rel="icon" href="brand-logo-cropped.png">
+  <link rel="stylesheet" href="css/styles.min.css?v=20260508">
+  <link rel="stylesheet" href="css/ai-assistant.min.css?v=20260508">
+  <link rel="stylesheet" href="css/ui-enhancements.min.css?v=20260508">
+  <link rel="stylesheet" href="css/search-ui.min.css?v=20260508">
+  <link rel="stylesheet" href="css/virtual-tryon.min.css?v=20260508">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <div class="container">
+        <a href="index.html" class="brand" aria-label="AR Clothing Zone home"><img src="assets/img/ar-clothing-zone-logo-160.jpg" srcset="assets/img/ar-clothing-zone-logo-160.jpg 160w, assets/img/ar-clothing-zone-logo-300.jpg 300w" sizes="132px" alt="AR Clothing Zone" class="logo" width="132" height="62"></a>
+        <button class="navbar-toggler" type="button" data-nav-toggle aria-controls="mainNavbar" aria-expanded="false" aria-label="Open navigation menu"><span class="navbar-toggler-icon" aria-hidden="true"></span></button>
+        <div class="navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="shop.html" class="nav-link">Shop</a></li>
+            <li><a href="size-guide.html" class="nav-link">Size Guide</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="ai-stylist.html" class="nav-link active" aria-current="page">AI Stylist</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section class="py-5 ai-band">
+      <div class="container">
+        <div class="style-panel">
+          <div>
+            <p class="eyebrow">AR Clothing AI</p>
+            <h1>Get a fit recommendation before you order.</h1>
+            <p>Ask about anime hoodies, oversized fit sizing, custom print ideas, and delivery support. The floating AI assistant is available on every page.</p>
+            <button type="button" class="btn btn-primary" data-open-ai>Open AI Stylist</button>
+          </div>
+          <div class="style-preview">
+            <article class="outfit-card"><strong>Anime Hoodie Fit</strong><span>Graphic hoodie + cargos + clean sneakers</span></article>
+            <article class="outfit-card"><strong>Oversized Tee Fit</strong><span>Relaxed tee + denim + layered accessories</span></article>
+            <article class="outfit-card"><strong>Custom Print Fit</strong><span>Your reference artwork + hoodie or tee base</span></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 virtual-tryon-section" aria-labelledby="tryon-title">
+      <div class="container">
+        <div class="section-heading mb-5 text-center">
+          <p class="eyebrow">Virtual Try-On</p>
+          <h2 id="tryon-title">See How Clothes Look on You</h2>
+          <p>Upload a clear photo and virtually try on anime hoodies, tees, jackets, and more before ordering.</p>
+        </div>
+
+        <div class="row g-5">
+          <!-- Upload Section -->
+          <div class="col-lg-6">
+            <div class="tryon-upload premium-card p-4">
+              <h3 class="mb-3">Upload Your Photo</h3>
+              <div class="upload-area" id="photo-upload-area" data-upload-zone>
+                <div class="upload-placeholder">
+                  <span class="upload-icon">📸</span>
+                  <p><strong>Drag and drop your photo here</strong></p>
+                  <p class="text-secondary small">or click to browse</p>
+                  <input type="file" id="photo-input" accept="image/*" class="d-none" aria-label="Upload photo for virtual try-on">
+                  <div class="file-requirements mt-3">
+                    <p class="small mb-2"><strong>Best results with:</strong></p>
+                    <ul class="small text-secondary">
+                      <li>✓ Full-body or waist-up photo</li>
+                      <li>✓ Clear lighting</li>
+                      <li>✓ Fitted or neutral clothing</li>
+                      <li>✓ Neutral background</li>
+                      <li>✓ JPG, PNG, or WebP (max 10MB)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Photo Type Detection -->
+              <div class="mt-4" id="photo-detection" class="d-none">
+                <div class="detection-badge p-2 rounded bg-light text-center">
+                  <p class="small mb-0"><strong>Detected:</strong> <span id="photo-type-label">Full-body photo</span></p>
+                  <p class="text-secondary small mb-0">Try-on mode: <span id="tryon-mode-label">Full outfit</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customization Section -->
+          <div class="col-lg-6">
+            <div class="tryon-customization premium-card p-4">
+              <h3 class="mb-4">Customize Your Look</h3>
+
+              <!-- Clothing Type -->
+              <div class="mb-4">
+                <label for="clothing-type" class="form-label"><strong>Select Clothing Type</strong></label>
+                <select id="clothing-type" class="form-select" disabled>
+                  <option value="" selected>Choose an item...</option>
+                  <option value="hoodie">Anime Hoodie</option>
+                  <option value="tshirt">Oversized T-Shirt</option>
+                  <option value="jacket">Jacket</option>
+                  <option value="pants">Pants</option>
+                  <option value="custom">Custom Print</option>
+                </select>
+                <small class="text-secondary">Upload a photo first to enable</small>
+              </div>
+
+              <!-- Color Selection -->
+              <div class="mb-4">
+                <label for="clothing-color" class="form-label"><strong>Color</strong></label>
+                <div id="color-selector" class="color-grid d-none">
+                  <button type="button" class="color-option" data-color="black" style="background-color: #1a1a1a;" aria-label="Black" disabled></button>
+                  <button type="button" class="color-option" data-color="white" style="background-color: #ffffff; border: 1px solid #ddd;" aria-label="White" disabled></button>
+                  <button type="button" class="color-option" data-color="navy" style="background-color: #001f3f;" aria-label="Navy" disabled></button>
+                  <button type="button" class="color-option" data-color="gray" style="background-color: #808080;" aria-label="Gray" disabled></button>
+                  <button type="button" class="color-option" data-color="red" style="background-color: #dc1920;" aria-label="Red" disabled></button>
+                  <button type="button" class="color-option" data-color="blue" style="background-color: #0066cc;" aria-label="Blue" disabled></button>
+                </div>
+              </div>
+
+              <!-- Size Selection -->
+              <div class="mb-4">
+                <label for="clothing-size" class="form-label"><strong>Size</strong></label>
+                <div class="size-grid">
+                  <button type="button" class="size-option" data-size="XS" disabled>XS</button>
+                  <button type="button" class="size-option" data-size="S" disabled>S</button>
+                  <button type="button" class="size-option" data-size="M" disabled>M</button>
+                  <button type="button" class="size-option" data-size="L" disabled>L</button>
+                  <button type="button" class="size-option" data-size="XL" disabled>XL</button>
+                  <button type="button" class="size-option" data-size="XXL" disabled>XXL</button>
+                </div>
+              </div>
+
+              <!-- Generate Button -->
+              <button type="button" class="btn btn-primary w-100" id="generate-tryon" disabled>
+                Generate Virtual Try-On
+              </button>
+              <small class="d-block text-center text-secondary mt-2">Processing typically takes 15-30 seconds</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Preview Section -->
+        <div class="tryon-preview-section mt-5 d-none" id="preview-section">
+          <div class="row g-4">
+            <div class="col-lg-8">
+              <div class="preview-card premium-card p-0 overflow-hidden">
+                <div class="preview-loading text-center p-5 d-none" id="preview-loading">
+                  <div class="spinner-border mb-3" role="status" aria-label="Generating virtual try-on">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <p>Generating your virtual try-on...</p>
+                  <small class="text-secondary">This may take up to 30 seconds</small>
+                </div>
+                <img id="preview-image" src="" alt="Virtual try-on preview" class="w-100" style="max-height: 600px; object-fit: cover;">
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="preview-details premium-card p-4">
+                <h4 class="mb-3">Your Try-On Details</h4>
+                <div class="detail-item mb-3">
+                  <small class="text-secondary">Clothing Type</small>
+                  <p class="mb-0" id="detail-type">-</p>
+                </div>
+                <div class="detail-item mb-3">
+                  <small class="text-secondary">Color</small>
+                  <p class="mb-0" id="detail-color">-</p>
+                </div>
+                <div class="detail-item mb-4">
+                  <small class="text-secondary">Size</small>
+                  <p class="mb-0" id="detail-size">-</p>
+                </div>
+
+                <div class="preview-actions">
+                  <button type="button" class="btn btn-primary w-100 mb-2" id="download-btn" aria-label="Download virtual try-on image">
+                    📥 Download Image
+                  </button>
+                  <button type="button" class="btn btn-outline-primary w-100 mb-2" id="share-btn" aria-label="Share virtual try-on on social media">
+                    📤 Share on Social
+                  </button>
+                  <a href="shop.html" class="btn btn-secondary w-100">
+                    🛒 Order This Item
+                  </a>
+                </div>
+
+                <hr class="my-3">
+                <p class="text-secondary small mb-0">Interested in this look? Click "Order This Item" to shop and complete your outfit. Our customer support team is always ready to help with sizing and delivery questions.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 text-center">
+            <button type="button" class="btn btn-outline-secondary" id="try-again-btn">
+              ↻ Try Different Clothing
+            </button>
+          </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="mt-5 pt-5 border-top">
+          <div class="row g-4 text-center">
+            <div class="col-md-4">
+              <div class="feature-box p-3">
+                <span class="feature-icon" style="font-size: 2rem;">🎯</span>
+                <h4 class="mt-2">Realistic Placement</h4>
+                <p class="text-secondary small">AI-powered algorithm places clothes naturally on your body with accurate proportions.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-box p-3">
+                <span class="feature-icon" style="font-size: 2rem;">✨</span>
+                <h4 class="mt-2">Photo Quality</h4>
+                <p class="text-secondary small">Results look professional and social-media ready. Your face and background remain intact.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-box p-3">
+                <span class="feature-icon" style="font-size: 2rem;">🛍️</span>
+                <h4 class="mt-2">Direct to Shop</h4>
+                <p class="text-secondary small">Love the look? Click "Order" and go straight to our shop to complete your purchase.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h2>Quick Links</h2>
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="size-guide.html">Size Guide</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="col-md-4">
+          <h2>Contact Info</h2>
+          <p>Phone: <a href="tel:+9779746955071">+977 9746955071</a></p>
+          <p>Email: <a href="mailto:shresthaamol012@gmail.com">shresthaamol012@gmail.com</a></p>
+          <p>Location: Sankhamul, Kathmandu, Nepal</p>
+        </div>
+        <div class="col-md-4">
+          <h2>WhatsApp</h2>
+          <p>Order directly or ask about sizes and availability.</p>
+          <a href="https://wa.me/9779746955071" target="_blank" rel="noopener noreferrer" class="btn whatsapp-btn w-100">WhatsApp</a>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 AR Clothing Zone | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <div class="cart-toast" data-cart-toast role="status" aria-live="polite"></div>
+  <button type="button" class="back-to-top" data-back-to-top aria-label="Back to top">Top</button>
+  
+  <script type="module" src="js/navbar.min.js?v=20260508"></script>
+  <script defer src="js/interactions.min.js?v=20260508"></script>
+  <script defer src="js/virtual-tryon.min.js?v=20260508"></script>
+  <script defer src="js/ai-assistant.min.js?v=20260508"></script>
+</body>
+</html>

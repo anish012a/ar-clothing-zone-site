@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anish012a.github.io/ar-clothing-zone-site/sitemap.xml

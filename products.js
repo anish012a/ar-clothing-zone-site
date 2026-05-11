@@ -1,156 +1,189 @@
+const whatsappUrl = "https://wa.me/9779746955071";
+
 const products = [
   {
     name: "Classic T-Shirt",
     price: 999,
     category: "tshirts",
-    image: "images/tshirts/download (4).jpg",
+    image: "assets/img/classic-tshirt-225.jpg",
     tag: "Streetwear T-Shirts"
   },
   {
     name: "Street Hoodie",
     price: 1999,
     category: "hoodies",
-    image: "images/hoodies/ChatGPT Image Apr 1, 2026, 01_34_24 PM.png",
+    image: "assets/img/anime-hoodie-naruto-480.jpg",
+    srcset: "assets/img/anime-hoodie-naruto-480.jpg 480w, assets/img/anime-hoodie-naruto-768.jpg 768w",
     tag: "Anime Hoodies"
   },
   {
     name: "Oversized Hoodie",
     price: 2199,
     category: "hoodies",
-    image: "images/hoodies/ChatGPT Image Apr 1, 2026, 01_34_44 PM.png",
+    image: "assets/img/oversized-anime-hoodie-480.jpg",
+    srcset: "assets/img/oversized-anime-hoodie-480.jpg 480w, assets/img/oversized-anime-hoodie-768.jpg 768w",
     tag: "Oversized Hoodies"
   },
   {
     name: "Casual Shirt",
     price: 1499,
     category: "tshirts",
-    image: "images/tshirts/download (5).jpg",
+    image: "assets/img/casual-shirt-225.jpg",
     tag: "Streetwear T-Shirts"
   },
   {
     name: "Premium Streetwear Layer",
     price: 2499,
     category: "hoodies",
-    image: "images/hoodies/ChatGPT Image Apr 1, 2026, 01_35_10 PM.png",
+    image: "assets/img/premium-streetwear-layer-480.jpg",
+    srcset: "assets/img/premium-streetwear-layer-480.jpg 480w, assets/img/premium-streetwear-layer-768.jpg 768w",
     tag: "Oversized Hoodies"
   },
   {
     name: "Anime Graphic Fit",
     price: 2299,
     category: "hoodies",
-    image: "images/hoodies/ChatGPT Image Apr 1, 2026, 01_49_37 PM.png",
+    image: "assets/img/anime-graphic-fit-480.jpg",
+    srcset: "assets/img/anime-graphic-fit-480.jpg 480w, assets/img/anime-graphic-fit-768.jpg 768w",
     tag: "Anime Hoodies"
   },
   {
-    name: "Street Design #1",
+    name: "Street Design 1",
     price: 1799,
     category: "designs",
-    image: "images/designs/ad638c3479a243f7c30dced26058b408.jpg",
+    image: "assets/img/street-design-1-480.jpg",
+    srcset: "assets/img/street-design-1-480.jpg 480w, assets/img/street-design-1-768.jpg 768w",
     tag: "Streetwear Designs"
   },
   {
-    name: "Street Design #2",
+    name: "Street Design 2",
     price: 1899,
     category: "designs",
-    image: "images/designs/b4e8ce6ebed2d58547d925118eb93cff.jpg",
+    image: "assets/img/street-design-2-480.jpg",
+    srcset: "assets/img/street-design-2-480.jpg 480w, assets/img/street-design-2-768.jpg 768w",
     tag: "Streetwear Designs"
   },
   {
-    name: "Street Design #3",
+    name: "Street Design 3",
     price: 1799,
     category: "designs",
-    image: "images/designs/c45996111bd15fd5b35c167346c0f03b.jpg",
+    image: "assets/img/street-design-3-480.jpg",
+    srcset: "assets/img/street-design-3-480.jpg 480w, assets/img/street-design-3-768.jpg 768w",
     tag: "Streetwear Designs"
   },
   {
-    name: "Street Design #4",
+    name: "Street Design 4",
     price: 1699,
     category: "designs",
-    image: "images/designs/fcedfafcb577016eb5e6865c858f6022.jpg",
+    image: "assets/img/street-design-4-480.jpg",
+    srcset: "assets/img/street-design-4-480.jpg 480w, assets/img/street-design-4-768.jpg 768w",
     tag: "Streetwear Designs"
   },
   {
-    name: "Street Design #5",
+    name: "Street Design 5",
     price: 1999,
     category: "designs",
-    image: "images/designs/fde02d990e22af86c199e07fef205b05.jpg",
+    image: "assets/img/street-design-5-480.jpg",
+    srcset: "assets/img/street-design-5-480.jpg 480w, assets/img/street-design-5-768.jpg 768w",
     tag: "Streetwear Designs"
   }
 ];
 
-function formatPrice(price) {
-  return new Intl.NumberFormat("en-NP", {
-    style: "currency",
-    currency: "NPR",
-    maximumFractionDigits: 0
-  }).format(price);
+const formatPrice = (price) => new Intl.NumberFormat("en-NP", {
+  style: "currency",
+  currency: "NPR",
+  maximumFractionDigits: 0
+}).format(price);
+
+const getAltText = (product) => {
+  if (product.category === "hoodies") return `${product.name} anime hoodie Nepal oversized streetwear`;
+  if (product.category === "tshirts") return `${product.name} streetwear t-shirt Kathmandu Nepal`;
+  return `${product.name} streetwear design Nepal AR Clothing Zone`;
+};
+
+function getVisibleProducts(category = "all") {
+  const searchInput = document.getElementById("shop-search");
+  const sortSelect = document.getElementById("shop-sort");
+  const query = searchInput?.value.trim().toLowerCase() || "";
+
+  let visibleProducts = category === "all"
+    ? [...products]
+    : products.filter((product) => product.category === category);
+
+  if (query) {
+    visibleProducts = visibleProducts.filter((product) => `${product.name} ${product.tag} ${product.category}`.toLowerCase().includes(query));
+  }
+
+  if (sortSelect?.value === "price-low") {
+    visibleProducts.sort((a, b) => a.price - b.price);
+  } else if (sortSelect?.value === "price-high") {
+    visibleProducts.sort((a, b) => b.price - a.price);
+  } else if (sortSelect?.value === "name") {
+    visibleProducts.sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  return visibleProducts;
 }
 
 function renderProducts(category = "all") {
   const container = document.getElementById("product-container");
+  if (!container) return;
 
-  if (!container) {
+  const visibleProducts = getVisibleProducts(category);
+
+  if (!visibleProducts.length) {
+    container.innerHTML = '<p class="empty-state">No products found in this category.</p>';
     return;
   }
 
-  const visibleProducts = category === "all"
-    ? products
-    : products.filter((product) => product.category === category);
-
-  if (visibleProducts.length === 0) {
-    container.innerHTML = '<div class="col-12"><p class="empty-state">No products found in this category.</p></div>';
-    return;
-  }
-
-  container.innerHTML = visibleProducts
-    .map((product) => {
-      let altText = `${product.name} - ${product.tag} Nepal AR Clothing Zone`;
-      if (product.category === "hoodies") {
-        altText = `${product.name} anime hoodie Nepal oversized streetwear`;
-      } else if (product.category === "tshirts") {
-        altText = `${product.name} streetwear tshirt Kathmandu Nepal`;
-      } else if (product.category === "designs") {
-        altText = `${product.name} streetwear design Nepal AR Clothing Zone`;
-      }
-      return `
-      <div class="col-md-4 col-lg-3">
-        <article class="product card shadow-sm h-100">
-          <div class="product-image">
-            <img src="${product.image}" alt="${altText}" loading="lazy" class="card-img-top img-fluid">
-          </div>
-          <div class="product-details card-body d-flex flex-column">
-            <span>${product.tag}</span>
-            <h3 class="h5">${product.name}</h3>
-            <p>${formatPrice(product.price)}</p>
-            <a href="https://wa.me/9779746955071" target="_blank" rel="noopener noreferrer" class="btn btn-dark w-100 mt-auto">Order via WhatsApp</a>
-          </div>
-        </article>
-      </div>
-    `;
-    })
-    .join("");
+  container.innerHTML = visibleProducts.map((product) => `
+    <div class="col-md-4 col-lg-3">
+      <article class="product card h-100">
+        <div class="product-image">
+          <img src="${product.image}" ${product.srcset ? `srcset="${product.srcset}" sizes="(min-width: 992px) 25vw, (min-width: 768px) 33vw, 92vw"` : ""} alt="${getAltText(product)}" loading="lazy" decoding="async" width="480" height="720">
+        </div>
+        <div class="product-details">
+          <span class="product-badge">${product.category === "hoodies" ? "Trending" : product.category === "designs" ? "Custom" : "Essential"}</span>
+          <span>${product.tag}</span>
+          <h3 class="h5">${product.name}</h3>
+          <p>${formatPrice(product.price)}</p>
+          <button type="button" class="btn btn-outline-dark w-100" data-add-cart="${product.name}">Quick add</button>
+          <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-dark w-100 mt-auto" aria-label="Order ${product.name} on WhatsApp">Order via WhatsApp</a>
+        </div>
+      </article>
+    </div>
+  `).join("");
 }
 
 function setupProductFilters() {
   const buttons = document.querySelectorAll(".filter-btn");
   const params = new URLSearchParams(window.location.search);
-  const initialCategory = params.get("category") || "all";
   const validCategories = ["all", "hoodies", "tshirts", "designs"];
-  const activeCategory = validCategories.includes(initialCategory) ? initialCategory : "all";
+  const activeCategory = validCategories.includes(params.get("category")) ? params.get("category") : "all";
 
   buttons.forEach((button) => {
     button.classList.toggle("active", button.dataset.filter === activeCategory);
-
     button.addEventListener("click", () => {
-      const category = button.dataset.filter;
-
       buttons.forEach((item) => item.classList.remove("active"));
       button.classList.add("active");
-      renderProducts(category);
+      renderProducts(button.dataset.filter);
     });
   });
+
+  document.getElementById("shop-search")?.addEventListener("input", () => renderProducts(document.querySelector(".filter-btn.active")?.dataset.filter || "all"));
+  document.getElementById("shop-sort")?.addEventListener("change", () => renderProducts(document.querySelector(".filter-btn.active")?.dataset.filter || "all"));
 
   renderProducts(activeCategory);
 }
 
-document.addEventListener("DOMContentLoaded", setupProductFilters);
+document.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-add-cart]");
+  const toast = document.querySelector("[data-cart-toast]");
+  if (!button || !toast) return;
+
+  toast.textContent = `${button.dataset.addCart} added to your style shortlist.`;
+  toast.classList.remove("is-visible");
+  requestAnimationFrame(() => toast.classList.add("is-visible"));
+});
+
+document.addEventListener("DOMContentLoaded", setupProductFilters, { once: true });
