@@ -1,0 +1,357 @@
+/**
+ * Global Styles
+ * Location: styles/globals.css
+ * 
+ * Global CSS including Tailwind directives and custom utilities
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root Variables */
+:root {
+  --color-primary: #dc2626;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --transition-smooth: all 0.3s ease-in-out;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Heading Styles */
+@layer components {
+  h1 {
+    @apply font-bold text-black;
+  }
+
+  h2 {
+    @apply font-bold text-black;
+  }
+
+  h3 {
+    @apply font-bold text-black;
+  }
+
+  h4, h5, h6 {
+    @apply font-semibold text-black;
+  }
+
+  /* Button Styles */
+  .btn-primary {
+    @apply px-8 py-4 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition-colors cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 border-2 border-red-600 text-red-600 font-bold rounded-lg hover:bg-red-600 hover:text-white transition-colors cursor-pointer;
+  }
+
+  .btn-ghost {
+    @apply px-8 py-4 text-black font-bold rounded-lg hover:bg-gray-100 transition-colors cursor-pointer;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-shadow;
+  }
+
+  .card-dark {
+    @apply bg-gray-900 text-white rounded-xl p-8 border border-gray-800;
+  }
+
+  /* Text Utilities */
+  .text-gradient {
+    @apply bg-gradient-to-r from-black to-red-600 bg-clip-text text-transparent;
+  }
+
+  /* Container Padding */
+  .container-padding {
+    @apply px-4 md:px-6 lg:px-8;
+  }
+
+  /* Flex Center */
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  /* Section Spacing */
+  .section-spacing {
+    @apply py-12 md:py-20 lg:py-24;
+  }
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.5s ease-out;
+}
+
+.animate-slide-in-down {
+  animation: slideInDown 0.5s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.5s ease-out;
+}
+
+.animate-bounce-slow {
+  animation: bounce 2s infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dc2626;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b91c1c;
+}
+
+/* Selection Styles */
+::selection {
+  background-color: #dc2626;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #dc2626;
+  color: white;
+}
+
+/* Link Styles */
+a {
+  color: #dc2626;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Input Styles */
+input,
+textarea,
+select {
+  @apply border border-gray-300 rounded-lg p-3 focus:outline-none focus:border-red-600 focus:ring-2 focus:ring-red-100 transition-all;
+}
+
+input::placeholder,
+textarea::placeholder {
+  @apply text-gray-400;
+}
+
+/* Code Block Styles */
+code {
+  @apply bg-gray-100 px-2 py-1 rounded text-sm font-mono;
+}
+
+pre {
+  @apply bg-gray-900 text-white p-4 rounded-lg overflow-x-auto;
+}
+
+/* List Styles */
+ul, ol {
+  @apply list-inside;
+}
+
+/* Image Styles */
+img {
+  @apply max-w-full h-auto;
+}
+
+/* Table Styles */
+table {
+  @apply w-full border-collapse;
+}
+
+th, td {
+  @apply border border-gray-300 px-4 py-2;
+}
+
+th {
+  @apply bg-gray-100 font-bold;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: more) {
+  :root {
+    --color-primary: #b91c1c;
+  }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+  /* Add dark mode styles here if needed */
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus Visible for Accessibility */
+:focus-visible {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+}
+
+/* Reduce Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

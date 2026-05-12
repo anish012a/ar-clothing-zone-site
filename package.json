@@ -1,0 +1,43 @@
+{
+  "name": "ar-clothing-zone",
+  "version": "1.0.0",
+  "description": "AR Clothing Zone - Modern custom clothing brand with anime streetwear inspiration",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export",
+    "analyze": "ANALYZE=true next build"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "framer-motion": "^10.16.0",
+    "lucide-react": "^0.292.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.0",
+    "postcss": "^8.4.24",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.48.0",
+    "eslint-config-next": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=16.13.0"
+  },
+  "keywords": [
+    "clothing",
+    "custom-fashion",
+    "anime",
+    "streetwear",
+    "nepal",
+    "next.js",
+    "react",
+    "tailwind-css"
+  ],
+  "author": "AR Clothing Zone",
+  "license": "MIT"
+}
