@@ -9,6 +9,8 @@ const ready = (callback) => {
 ready(() => {
   const toggler = document.querySelector("[data-nav-toggle]");
   const menu = document.getElementById("mainNavbar");
+  const header = document.querySelector(".site-header");
+  const backToTop = document.querySelector("[data-back-to-top]");
 
   if (toggler && menu) {
     toggler.addEventListener("click", () => {
@@ -23,6 +25,19 @@ ready(() => {
       }
     });
   }
+
+  const updateScrollControls = () => {
+    const isScrolled = window.scrollY > 24;
+    header?.classList.toggle("is-scrolled", isScrolled);
+    backToTop?.classList.toggle("is-visible", window.scrollY > 520);
+  };
+
+  window.addEventListener("scroll", updateScrollControls, { passive: true });
+  updateScrollControls();
+
+  backToTop?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
   const stickyButton = document.querySelector(".sticky-whatsapp-btn");
   const contactSection = document.getElementById("contact");
