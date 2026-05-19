@@ -4,8 +4,260 @@
   <meta charset="UTF-8">
   <meta name="google-site-verification" content="google1bee7a45a74caa6b">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn SEO, Google Business Profile optimization, and content promotion strategies with AR Clothing Zone digital marketing blog.">
-  <title>Digital Marketing Blog Nepal | AR Clothing Zone</title>
+  <meta name="description" content="Read AR Clothing Zone blog guides on custom clothing in Nepal, anime hoodies, streetwear, local SEO, Google Business Profile optimization, and content promotion.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AR Clothing Zone Blog | Custom Clothing & SEO Guides Nepal">
+  <meta property="og:description" content="Custom clothing, anime streetwear, SEO, and online growth resources from AR Clothing Zone.">
+  <meta property="og:image" content="assets/img/anime-hoodie-naruto-768.jpg">
+  <meta property="og:url" content="https://anish012a.github.io/ar-clothing-zone-site/blog.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AR Clothing Zone Blog | Custom Clothing & SEO Guides Nepal">
+  <meta name="twitter:description" content="Browse AR Clothing Zone articles on custom clothing, anime hoodies, streetwear, local SEO, and business growth.">
+  <meta name="twitter:image" content="assets/img/anime-hoodie-naruto-768.jpg">
+  <title>AR Clothing Zone Blog | Custom Clothing & SEO Guides Nepal</title>
+  <link rel="canonical" href="https://anish012a.github.io/ar-clothing-zone-site/blog.html">
+  <link rel="icon" href="brand-logo-cropped.png">
+  <link rel="preload" as="image" href="assets/img/anime-hoodie-naruto-768.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="css/styles.min.css?v=20260512">
+  <link rel="stylesheet" href="css/ai-assistant.min.css?v=20260512">
+  <link rel="stylesheet" href="css/ui-enhancements.min.css?v=20260512">
+  <link rel="stylesheet" href="css/search-ui.min.css?v=20260512">
+  <style>
+    .blog-index-hero {
+      background:
+        linear-gradient(90deg, rgba(3, 8, 16, 0.9), rgba(8, 23, 42, 0.74) 54%, rgba(8, 57, 132, 0.5)),
+        url("assets/img/anime-hoodie-naruto-768.jpg") center 34% / cover no-repeat;
+      color: var(--paper);
+      overflow: hidden;
+    }
+
+    .blog-index-hero h1 {
+      max-width: 860px;
+      margin: 8px 0 18px;
+      color: var(--paper);
+      font-size: clamp(2.25rem, 6vw, 4.7rem);
+    }
+
+    .blog-index-hero p:not(.eyebrow) {
+      max-width: 680px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: clamp(1.02rem, 2vw, 1.18rem);
+    }
+
+    .featured-article {
+      display: grid;
+      grid-template-columns: minmax(240px, 0.78fr) minmax(0, 1fr);
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .featured-article img,
+    .blog-card-pro img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .featured-media {
+      min-height: 360px;
+      background: var(--soft-blue);
+    }
+
+    .featured-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: clamp(24px, 4vw, 42px);
+    }
+
+    .blog-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 750;
+    }
+
+    .blog-category {
+      color: var(--red);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .featured-copy h2,
+    .blog-card-body h2,
+    .blog-card-body h3 {
+      color: var(--navy);
+    }
+
+    .featured-copy h2 {
+      margin-bottom: 0;
+      font-size: clamp(1.7rem, 3vw, 2.45rem);
+    }
+
+    .blog-tools {
+      display: grid;
+      grid-template-columns: minmax(240px, 1fr) auto;
+      gap: 16px;
+      align-items: end;
+      padding: 20px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .blog-search label,
+    .blog-category-filter legend {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--navy);
+      font-size: 0.82rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .blog-category-filter {
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .blog-filter-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .blog-filter-actions .filter-btn {
+      min-width: 0;
+      min-height: 42px;
+      padding: 9px 14px;
+    }
+
+    .blog-grid-pro {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .blog-card-pro {
+      display: flex;
+      min-height: 100%;
+      flex-direction: column;
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .blog-card-pro:hover {
+      transform: translateY(-5px);
+      border-color: rgba(183, 25, 36, 0.28);
+      box-shadow: 0 22px 52px rgba(14, 47, 85, 0.17);
+    }
+
+    .blog-card-media {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+    }
+
+    .blog-card-media::after {
+      position: absolute;
+      inset: auto 0 0;
+      height: 44%;
+      content: "";
+      background: linear-gradient(180deg, rgba(14, 47, 85, 0), rgba(14, 47, 85, 0.42));
+      pointer-events: none;
+    }
+
+    .blog-card-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 12px;
+      padding: clamp(20px, 3vw, 28px);
+    }
+
+    .blog-card-body h2,
+    .blog-card-body h3 {
+      margin-bottom: 0;
+      font-size: clamp(1.18rem, 2vw, 1.45rem);
+    }
+
+    .blog-card-body p {
+      color: var(--muted);
+    }
+
+    .blog-card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .blog-empty {
+      display: none;
+      padding: 28px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .blog-empty.is-visible {
+      display: block;
+    }
+
+    .load-more-wrap {
+      display: none;
+      justify-content: center;
+      margin-top: 28px;
+    }
+
+    .load-more-wrap.is-visible {
+      display: flex;
+    }
+
+    @media (max-width: 980px) {
+      .featured-article,
+      .blog-tools {
+        grid-template-columns: 1fr;
+      }
+
+      .blog-grid-pro {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .featured-media {
+        min-height: 280px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .blog-grid-pro {
+        grid-template-columns: 1fr;
+      }
+
+      .blog-filter-actions,
+      .blog-card-actions {
+        display: grid;
+      }
+
+    }
+  </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18148558428"></script>
   <script>
@@ -15,12 +267,6 @@
 
     gtag('config', 'AW-18148558428');
   </script>
-  <link rel="canonical" href="https://anish012a.github.io/ar-clothing-zone-site/blog.html">
-  <link rel="icon" href="brand-logo-cropped.png">
-  <link rel="stylesheet" href="css/styles.min.css?v=20260512">
-  <link rel="stylesheet" href="css/ai-assistant.min.css?v=20260512">
-  <link rel="stylesheet" href="css/ui-enhancements.min.css?v=20260512">
-  <link rel="stylesheet" href="css/search-ui.min.css?v=20260512">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -48,67 +294,155 @@
   </header>
 
   <main id="main-content">
-    <section class="page-hero py-5">
+    <section class="blog-index-hero py-5" aria-labelledby="blog-page-title">
       <div class="container">
-        <p class="eyebrow">Style journal</p>
-        <h1>AR Clothing Zone Blog</h1>
-        <p>Digital marketing guides, SEO strategies, and business tips for Kathmandu entrepreneurs and online sellers in Nepal.</p>
+        <p class="eyebrow">AR Clothing Zone journal</p>
+        <h1 id="blog-page-title">Custom clothing, streetwear, and SEO guides for Nepal.</h1>
+        <p>Browse every published AR Clothing Zone article in one place, from anime hoodies and custom T-shirts to Google Business Profile optimization and content promotion.</p>
       </div>
     </section>
 
-    <section class="py-5">
+    <section class="py-5" aria-labelledby="featured-blog-title">
       <div class="container">
         <div class="section-heading mb-5">
-          <p class="eyebrow">Latest Articles</p>
-          <h2>Digital Marketing Resources</h2>
-          <p>Learn proven strategies to grow your business online with our comprehensive guides.</p>
+          <p class="eyebrow">Featured latest</p>
+          <h2 id="featured-blog-title">Start with the newest guide.</h2>
+          <p>The latest article is highlighted first, with the full blog library searchable below.</p>
         </div>
 
-        <div class="row g-4 mb-5">
-          <!-- Blog Card 1 -->
-          <div class="col-md-6 col-lg-4">
-            <article class="blog-card h-100 d-flex flex-column">
-              <div class="mb-3">
-                <span style="color: var(--red); font-size: 0.82rem; font-weight: 900;">SEO GUIDE</span>
+        <div class="blog-featured">
+          <article class="featured-article">
+            <a class="featured-media" href="blogs/why-choose-ar-clothing-zone.html" aria-label="Read Why Choose AR Clothing Zone for Custom Clothing in Nepal">
+              <img src="assets/img/oversized-anime-hoodie-768.jpg" alt="Oversized anime hoodie representing AR Clothing Zone youth streetwear in Nepal" width="768" height="1152" fetchpriority="high">
+            </a>
+            <div class="featured-copy">
+              <span class="blog-category">Nepal Streetwear</span>
+              <h2>Why AR Clothing Zone Feels Different From Other Clothing Brands in Nepal</h2>
+              <p>Explore how AR Clothing Zone connects with Nepal's new generation through oversized fashion, anime-inspired streetwear, quality, creativity, and youth culture.</p>
+              <p class="blog-meta-row"><span>AR Clothing Zone</span><span>May 19, 2026</span><span>6 min read</span></p>
+              <div class="blog-card-actions">
+                <a href="blogs/why-ar-clothing-zone-feels-different.html" class="btn btn-primary">Read More</a>
               </div>
-              <h3 style="color: var(--navy); margin-bottom: 12px;">Google Business Profile Optimization</h3>
-              <p style="color: var(--muted); flex-grow: 1;">Learn how to optimize your Google Business Profile for better local SEO rankings in Nepal and attract more customers.</p>
-              <p style="color: var(--muted); font-size: 0.9rem; margin: 12px 0 16px;">May 2, 2026 • 8 min read</p>
-              <a href="blogs/google-my-business.html" class="btn btn-primary btn-sm align-self-start">Read the Google Business Profile optimization guide</a>
-            </article>
-          </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-          <!-- Blog Card 2 -->
-          <div class="col-md-6 col-lg-4">
-            <article class="blog-card h-100 d-flex flex-column">
-              <div class="mb-3">
-                <span style="color: var(--red); font-size: 0.82rem; font-weight: 900;">STRATEGY</span>
-              </div>
-              <h3 style="color: var(--navy); margin-bottom: 12px;">Content Promotion Strategy for Beginners</h3>
-              <p style="color: var(--muted); flex-grow: 1;">Master the fundamentals of promoting your content across multiple channels. Practical strategies for business growth in Nepal.</p>
-              <p style="color: var(--muted); font-size: 0.9rem; margin: 12px 0 16px;">April 28, 2026 • 10 min read</p>
-              <a href="blogs/content-promotion-strategy.html" class="btn btn-primary btn-sm align-self-start">Read the content promotion strategy guide</a>
-            </article>
-          </div>
-
-          <!-- Blog Card 3 -->
-          <div class="col-md-6 col-lg-4">
-            <article class="blog-card h-100 d-flex flex-column">
-              <div class="mb-3">
-                <span style="color: var(--red); font-size: 0.82rem; font-weight: 900;">SEO BASICS</span>
-              </div>
-              <h3 style="color: var(--navy); margin-bottom: 12px;">Off Page SEO Basics Guide</h3>
-              <p style="color: var(--muted); flex-grow: 1;">Learn the fundamentals of off-page SEO including backlinks, citations, and building authority for your website.</p>
-              <p style="color: var(--muted); font-size: 0.9rem; margin: 12px 0 16px;">April 25, 2026 • 9 min read</p>
-              <a href="blogs/off-page-seo-basics.html" class="btn btn-primary btn-sm align-self-start">Learn off-page SEO basics</a>
-            </article>
-          </div>
+    <section class="py-5 muted-section" aria-labelledby="all-blogs-title">
+      <div class="container">
+        <div class="section-heading mb-5">
+          <p class="eyebrow">All articles</p>
+          <h2 id="all-blogs-title">Browse every blog post.</h2>
+          <p>Search by topic or filter by category to find clothing, SEO, and growth resources quickly.</p>
         </div>
 
-        <div style="background: var(--soft-blue); border-radius: 8px; padding: 40px 30px; text-align: center;">
-          <h3 style="color: var(--navy); margin-bottom: 12px;">More articles coming soon</h3>
-          <p style="color: var(--muted); margin-bottom: 20px;">Subscribe to our newsletter to get the latest digital marketing tips and strategies delivered to your inbox.</p>
-          <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+        <div class="blog-tools mb-5" aria-label="Blog search and category filters">
+          <div class="blog-search">
+            <label for="blog-search">Search blogs</label>
+            <input id="blog-search" type="search" placeholder="Search custom clothing, SEO, hoodies..." autocomplete="off" data-blog-search>
+          </div>
+          <fieldset class="blog-category-filter">
+            <legend>Categories</legend>
+            <div class="blog-filter-actions">
+              <button type="button" class="filter-btn active" data-blog-filter="all">All</button>
+              <button type="button" class="filter-btn" data-blog-filter="clothing">Clothing</button>
+              <button type="button" class="filter-btn" data-blog-filter="seo">SEO</button>
+              <button type="button" class="filter-btn" data-blog-filter="strategy">Strategy</button>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="blog-grid-pro" data-blog-grid>
+          <article class="blog-card-pro" data-blog-card data-category="clothing" data-title="why ar clothing zone feels different clothing brands nepal youth culture oversized fashion anime streetwear quality local brand">
+            <a class="blog-card-media" href="blogs/why-ar-clothing-zone-feels-different.html" aria-label="Read Why AR Clothing Zone Feels Different From Other Clothing Brands in Nepal">
+              <img src="assets/img/oversized-anime-hoodie-480.jpg" srcset="assets/img/oversized-anime-hoodie-480.jpg 480w, assets/img/oversized-anime-hoodie-768.jpg 768w" sizes="(min-width: 980px) 33vw, 92vw" alt="Oversized anime hoodie for AR Clothing Zone Nepal streetwear article" width="480" height="720" loading="lazy" decoding="async">
+            </a>
+            <div class="blog-card-body">
+              <span class="blog-category">Nepal Streetwear</span>
+              <h2>Why AR Clothing Zone Feels Different</h2>
+              <p>How AR Clothing Zone stands out through oversized fashion, anime-inspired style, local youth culture, better quality, and a stronger brand feeling.</p>
+              <p class="blog-meta-row"><span>AR Clothing Zone</span><span>May 19, 2026</span><span>6 min read</span></p>
+              <div class="blog-card-actions">
+                <a href="blogs/why-ar-clothing-zone-feels-different.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card-pro" data-blog-card data-category="clothing" data-title="why choose ar clothing zone in nepal custom clothing anime hoodies t-shirts streetwear delivery cash on delivery">
+            <a class="blog-card-media" href="blogs/why-choose-ar-clothing-zone.html" aria-label="Read Why Choose AR Clothing Zone in Nepal">
+              <img src="assets/img/anime-hoodie-naruto-480.jpg" srcset="assets/img/anime-hoodie-naruto-480.jpg 480w, assets/img/anime-hoodie-naruto-768.jpg 768w" sizes="(min-width: 980px) 33vw, 92vw" alt="Anime hoodie from AR Clothing Zone custom clothing collection" width="480" height="720" loading="lazy" decoding="async">
+            </a>
+            <div class="blog-card-body">
+              <span class="blog-category">Custom Clothing</span>
+              <h2>Why Choose AR Clothing Zone in Nepal</h2>
+              <p>A shopper-friendly guide to custom T-shirts, anime hoodies, oversized streetwear, delivery support, and Cash on Delivery options.</p>
+              <p class="blog-meta-row"><span>AR Clothing Zone</span><span>May 19, 2026</span><span>7 min read</span></p>
+              <div class="blog-card-actions">
+                <a href="blogs/why-choose-ar-clothing-zone.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card-pro" data-blog-card data-category="seo" data-title="google business profile optimization nepal local seo google maps rankings">
+            <a class="blog-card-media" href="blogs/google-my-business.html" aria-label="Read Google Business Profile Optimization in Nepal">
+              <img src="assets/img/ar-clothing-zone-logo-300.jpg" alt="AR Clothing Zone logo for Google Business Profile optimization guide" width="300" height="300" loading="lazy" decoding="async">
+            </a>
+            <div class="blog-card-body">
+              <span class="blog-category">SEO Guide</span>
+              <h2>Google Business Profile Optimization</h2>
+              <p>Learn how to improve your Google Business Profile for local SEO rankings, Maps visibility, and customer discovery in Nepal.</p>
+              <p class="blog-meta-row"><span>AR Clothing Zone</span><span>May 2, 2026</span><span>8 min read</span></p>
+              <div class="blog-card-actions">
+                <a href="blogs/google-my-business.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card-pro" data-blog-card data-category="strategy" data-title="content promotion strategy beginners social media email whatsapp internal linking nepal">
+            <a class="blog-card-media" href="blogs/content-promotion-strategy.html" aria-label="Read Content Promotion Strategy for Beginners">
+              <img src="assets/img/street-design-1-480.jpg" srcset="assets/img/street-design-1-480.jpg 480w, assets/img/street-design-1-768.jpg 768w" sizes="(min-width: 980px) 33vw, 92vw" alt="Streetwear design preview for content promotion strategy article" width="480" height="640" loading="lazy" decoding="async">
+            </a>
+            <div class="blog-card-body">
+              <span class="blog-category">Strategy</span>
+              <h2>Content Promotion Strategy for Beginners</h2>
+              <p>Master practical ways to promote content across social media, email, WhatsApp groups, internal links, and search channels.</p>
+              <p class="blog-meta-row"><span>AR Clothing Zone</span><span>April 28, 2026</span><span>10 min read</span></p>
+              <div class="blog-card-actions">
+                <a href="blogs/content-promotion-strategy.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card-pro" data-blog-card data-category="seo" data-title="off page seo basics backlinks citations authority reviews brand mentions nepal">
+            <a class="blog-card-media" href="blogs/off-page-seo-basics.html" aria-label="Read Off Page SEO Basics Guide">
+              <img src="assets/img/streetwear-hoodie-design-768.jpg" srcset="assets/img/streetwear-hoodie-design-480.jpg 480w, assets/img/streetwear-hoodie-design-768.jpg 768w" sizes="(min-width: 980px) 33vw, 92vw" alt="Streetwear hoodie design used as visual for off-page SEO authority guide" width="768" height="768" loading="lazy" decoding="async">
+            </a>
+            <div class="blog-card-body">
+              <span class="blog-category">SEO Basics</span>
+              <h2>Off Page SEO Basics Guide</h2>
+              <p>Understand backlinks, citations, brand mentions, reviews, and authority-building signals that help websites rank better.</p>
+              <p class="blog-meta-row"><span>AR Clothing Zone</span><span>April 25, 2026</span><span>9 min read</span></p>
+              <div class="blog-card-actions">
+                <a href="blogs/off-page-seo-basics.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="blog-empty" data-blog-empty>No blog posts match that search. Try another keyword or choose All.</p>
+        <div class="load-more-wrap" data-load-more-wrap>
+          <button type="button" class="btn btn-primary" data-load-more>Load more articles</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" aria-labelledby="blog-cta-title">
+      <div class="container">
+        <div style="background: var(--navy); color: var(--paper); border-radius: 8px; padding: clamp(28px, 5vw, 48px); text-align: center;">
+          <h2 id="blog-cta-title" style="color: var(--paper);">Need help choosing a custom fit?</h2>
+          <p style="max-width: 680px; margin: 0 auto 22px; color: rgba(255, 255, 255, 0.88);">Send your hoodie, T-shirt, or design idea and AR Clothing Zone will help with sizing, print options, delivery details, and ordering.</p>
+          <a href="contact.html" class="btn btn-primary">Contact AR Clothing Zone</a>
         </div>
       </div>
     </section>
@@ -144,7 +478,107 @@
 
   <div class="cart-toast" data-cart-toast role="status" aria-live="polite"></div>
   <button type="button" class="back-to-top" data-back-to-top aria-label="Back to top">Top</button>
-  
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "AR Clothing Zone Blog",
+    "description": "Blog articles about custom clothing, anime streetwear, SEO, and online business growth in Nepal.",
+    "url": "https://anish012a.github.io/ar-clothing-zone-site/blog.html",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://anish012a.github.io/ar-clothing-zone-site/blogs/why-ar-clothing-zone-feels-different.html",
+          "name": "Why AR Clothing Zone Feels Different From Other Clothing Brands in Nepal"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://anish012a.github.io/ar-clothing-zone-site/blogs/why-choose-ar-clothing-zone.html",
+          "name": "Why Choose AR Clothing Zone in Nepal"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://anish012a.github.io/ar-clothing-zone-site/blogs/google-my-business.html",
+          "name": "Google Business Profile Optimization"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://anish012a.github.io/ar-clothing-zone-site/blogs/content-promotion-strategy.html",
+          "name": "Content Promotion Strategy for Beginners"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://anish012a.github.io/ar-clothing-zone-site/blogs/off-page-seo-basics.html",
+          "name": "Off Page SEO Basics Guide"
+        }
+      ]
+    }
+  }
+  </script>
+  <script>
+    (() => {
+      const cards = Array.from(document.querySelectorAll("[data-blog-card]"));
+      const search = document.querySelector("[data-blog-search]");
+      const filterButtons = Array.from(document.querySelectorAll("[data-blog-filter]"));
+      const empty = document.querySelector("[data-blog-empty]");
+      const loadWrap = document.querySelector("[data-load-more-wrap]");
+      const loadMore = document.querySelector("[data-load-more]");
+      const pageSize = 6;
+      let activeCategory = "all";
+      let visibleLimit = pageSize;
+
+      const matchesCard = (card) => {
+        const query = (search?.value || "").trim().toLowerCase();
+        const categoryMatches = activeCategory === "all" || card.dataset.category === activeCategory;
+        const text = `${card.dataset.title || ""} ${card.textContent || ""}`.toLowerCase();
+        return categoryMatches && (!query || text.includes(query));
+      };
+
+      const render = () => {
+        const matching = cards.filter(matchesCard);
+
+        cards.forEach((card) => {
+          card.hidden = true;
+        });
+
+        matching.slice(0, visibleLimit).forEach((card) => {
+          card.hidden = false;
+        });
+
+        empty?.classList.toggle("is-visible", matching.length === 0);
+        loadWrap?.classList.toggle("is-visible", matching.length > visibleLimit);
+      };
+
+      search?.addEventListener("input", () => {
+        visibleLimit = pageSize;
+        render();
+      });
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          activeCategory = button.dataset.blogFilter || "all";
+          visibleLimit = pageSize;
+          filterButtons.forEach((item) => item.classList.toggle("active", item === button));
+          render();
+        });
+      });
+
+      loadMore?.addEventListener("click", () => {
+        visibleLimit += pageSize;
+        render();
+      });
+
+      render();
+    })();
+  </script>
   <script type="module" src="js/navbar.min.js?v=20260512"></script>
   <script defer src="js/ai-assistant.min.js?v=20260512"></script>
 </body>
