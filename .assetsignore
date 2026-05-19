@@ -1,0 +1,35 @@
+# Dependencies and generated output
+node_modules/
+**/node_modules/
+.next/
+**/.next/
+dist/
+build/
+
+# Git and local Cloudflare state
+.git/
+.github/
+.wrangler/
+.dev.vars*
+.env*
+
+# Source-only framework files
+components/
+config/
+hooks/
+pages/
+scripts/
+styles/
+utils/
+next.config.js
+postcss.config.js
+tailwind.config.js
+package.json
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Project documentation
+*.md
+SECURITY_HEADERS.md
+blogs/*.pdf

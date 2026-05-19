@@ -26,7 +26,7 @@ export default function RootLayout({ Component, pageProps }) {
     <>
       <Head>
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/brand-logo-cropped.png" />
 
         {/* Meta Tags */}
         <meta charset="utf-8" />
