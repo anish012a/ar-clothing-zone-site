@@ -5,23 +5,15 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://anish012a.github.io/ar-clothing-zone-site/about.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://anish012a.github.io/ar-clothing-zone-site/shop.html</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://anish012a.github.io/ar-clothing-zone-site/collections/naruto.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://anish012a.github.io/ar-clothing-zone-site/collections/jjk.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://anish012a.github.io/ar-clothing-zone-site/collections/one-piece.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://anish012a.github.io/ar-clothing-zone-site/collections/oversized.html</loc>
+    <loc>https://anish012a.github.io/ar-clothing-zone-site/products.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -30,7 +22,7 @@
   </url>
   <url>
     <loc>https://anish012a.github.io/ar-clothing-zone-site/anime-hoodies-nepal.html</loc>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://anish012a.github.io/ar-clothing-zone-site/size-guide.html</loc>
@@ -45,12 +37,40 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://anish012a.github.io/ar-clothing-zone-site/blogs/why-choose-ar-clothing-zone.html</loc>
+    <loc>https://anish012a.github.io/ar-clothing-zone-site/collections/naruto.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://anish012a.github.io/ar-clothing-zone-site/collections/jjk.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://anish012a.github.io/ar-clothing-zone-site/collections/one-piece.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://anish012a.github.io/ar-clothing-zone-site/collections/oversized.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://anish012a.github.io/ar-clothing-zone-site/blogs/dashing-offers-nepal.html</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://anish012a.github.io/ar-clothing-zone-site/blogs/why-ar-clothing-zone-feels-different.html</loc>
+    <loc>https://anish012a.github.io/ar-clothing-zone-site/blogs/dashain-special.html</loc>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://anish012a.github.io/ar-clothing-zone-site/blogs/anime-oversized-tshirts-nepal.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://anish012a.github.io/ar-clothing-zone-site/blogs/why-choose-ar-clothing-zone.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://anish012a.github.io/ar-clothing-zone-site/blogs/why-ar-clothing-zone-feels-different.html</loc>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://anish012a.github.io/ar-clothing-zone-site/blogs/google-my-business.html</loc>
